@@ -1,0 +1,96 @@
+.App {
+  text-align: center;
+}
+
+.fi {
+  display: inline-block;
+  width: 1.33333333em;
+  height: 1em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.fi-gb {
+  background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.3.2/flags/4x3/gb.svg');
+}
+
+.fi-au {
+  background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.3.2/flags/4x3/au.svg');
+}
+
+.fi-nz {
+  background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.3.2/flags/4x3/nz.svg');
+}
+
+.world-clock-container {
+  background-color: #f0f0f0;
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better appearance */
+  max-width: 90%; /* Limit the width of the container */
+  margin: 10px auto; /* Center the container horizontally */
+  overflow: hidden; /* Prevent content from overflowing the container */
+}
+
+.world-clock {
+  display: flex;
+  flex-direction: column; /* Stack rows vertically */
+  gap: 10px; /* Add spacing between rows */
+  font-family: Arial, sans-serif;
+  width: 100%; /* Ensure the content fits within the container */
+}
+
+.flag-container {
+  display: inline-block;
+  width: 40px;
+  height: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px; /* Rounded corners for flags */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better appearance */
+  opacity: 0;
+  /* Start invisible */
+  animation: fadeIn 1.5s ease-in forwards;
+  /* Apply fade-in animation */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.clock-row {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between flag, text, and time */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Rounded corners for each row */
+  background-color: #ffffff; /* White background for each row */
+  flex-wrap: nowrap; /* Prevent items in the row from wrapping */
+  overflow: hidden; /* Prevent content from overflowing the row */
+}
+
+.clock-row strong {
+  font-size: 16px;
+  flex: 1; /* Allow the country name to take up available space */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+}
+
+.clock-row p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  white-space: nowrap; /* Prevent time from wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+}
